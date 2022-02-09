@@ -1,89 +1,74 @@
-*{
-    text-decoration: none;
-    margin: 0px;
-    padding: 0px;
-}
-
-body{
-    margin: 0px;
-    padding: 0px;
-    font-family: 'Open Sans', sans-serif;
-}
-
-.wrapper{
-    width: 1100px;
-    margin: auto;
-    position: relative;
-}
-
-.logo{
-    font-size: 50px;
-    font-weight: 800;
-    float: left;
-    font-family: 'Courier New', Courier, monospace;
-    color: aliceblue;
-}
-
-.menu{
-    float: right;
+.container{
+    display: grid;
+    height: 100vh;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 0.7fr 0.6fr 1.0fr 0.5fr 1.5fr 0.8fr;
+    grid-template-areas: 
+    "nav nav nav nav1 nav2 nav3"
+    "header header header header header side"
+    "sidebar content1 content1 content1 content1 ads"
+    "sidebar content1 content1 content1 content1 ads"
+    "sidebar content2 content2 content2 content2 stuffs"
+    "footer footer footer footer footer footer";
+    grid-gap: 0.2rem;
 }
 
 nav{
-    width: 100%;
-    margin: auto;
-    display: flex;
-    line-height: 80px;
-    position: sticky;
-    top: 0;
-    background: blue;
+    background: #FFD700;
+    grid-area: nav;
 }
 
-nav ul{
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
+#nav1{
+    background: #FFB6C1;
+    grid-area: nav1;
 }
 
-nav ul li{
-    float: left;
+#nav2{
+    background: #FFB6C1;
+    grid-area: nav2;
 }
 
-nav ul li a{
-    color: aliceblue;
-    font-weight: bold;
-    text-align: center;
-    padding: 0px 16px 0px 16px;
-    text-decoration: none;
+#nav3{
+    background: #FFB6C1;
+    grid-area: nav3;
 }
 
-nav ul li a:hover{
-    text-decoration: underline;
+header{
+    background: #B0C4DE;
+    grid-area: header;
 }
 
-.kolom{
-    margin-top: 50px;
-    margin-bottom: 50px;
-    margin-left: 75px;
-    margin-right: 75px;
-    text-align: justify;
-    color: blue;
+#side{
+    background: #FF8C00;
+    grid-area: side;
 }
 
-.kolom .isian{
-    font-size: 15px;
-    font-weight: bold;
-    color:blue;
+#ads{
+    background: #006400;
+    grid-area: ads;
 }
 
-#copyright{
-    text-align: center;
-    width: 100%;
-    padding: 50px 0px 50px 0px;
-    margin-top: 50px;
-    color: aliceblue;
-    background: blue;
+#stuffs{
+    background: #FF00FF;
+    grid-area: stuffs;
 }
-.body{
-    background: bisque;
+#sidebar{
+    background: #98FB98;
+    grid-area: sidebar;
 }
+
+#content1{
+    background: #D3D3D3;
+    grid-area: content1;
+}
+
+#content2{
+    background: #FFFF00;
+    grid-area: content2;
+}
+
+footer{
+    background: #A0522D;
+    grid-area: footer;
+}
+
